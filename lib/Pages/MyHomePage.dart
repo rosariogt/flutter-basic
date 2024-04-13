@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projects/Widget/MyRichText.dart';
 import 'package:projects/Widget/MyText.dart';
 
 import '../main.dart';
@@ -38,7 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:  SafeArea(
-        child: MyText(),
+        child: MyRichText(),
+        //child: MyText(),
       )
 
     );
