@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projects/Widget/MyAppBar.dart';
 import 'package:projects/Widget/MyButtons.dart';
 import 'package:projects/Widget/MyFloatingActionButton.dart';
 import 'package:projects/Widget/MyIcon.dart';
@@ -42,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //se debe agregar al boton flotante
       floatingActionButton: MyFloatingActionButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      appBar: MyAppBar(),
       body:  SafeArea(
         child: MyButtons(),
         //child: MyImage(),
