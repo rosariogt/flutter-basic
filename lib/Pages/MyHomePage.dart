@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projects/Widget/MyButtons.dart';
 import 'package:projects/Widget/MyIcon.dart';
 import 'package:projects/Widget/MyImage.dart';
 import 'package:projects/Widget/MyRichText.dart';
@@ -41,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:  SafeArea(
-        child: MyImage(),
+        child: MyButtons(),
+        //child: MyImage(),
         //child: MyIcon(),
         //child: MyRichText(),
         //child: MyText(),
