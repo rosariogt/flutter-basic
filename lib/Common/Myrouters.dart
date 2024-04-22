@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:projects/Pages/LoginPage.dart';
 import 'package:projects/Pages/MyHomePage.dart';
 import 'package:projects/Pages/NowPlayingPage.dart';
@@ -14,7 +15,8 @@ class Myrouters {
   static Route<dynamic> generateRoute( RouteSettings settings) {
     switch(settings.name) {
       case "/home":
-        return MaterialPageRoute(builder: (_) => MyHomePage(title: "title"));
+        return PageTransition(child: MyHomePage(title: "g"), type: PageTransitionType.scale,
+        settings: settings, alignment: Alignment.topLeft);
       case "/login":
         return MaterialPageRoute(builder: (_) => LoginPage());
       case "/play_list":

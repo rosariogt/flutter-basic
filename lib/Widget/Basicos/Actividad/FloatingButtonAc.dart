@@ -10,12 +10,12 @@ class FloatingButtonAc extends StatelessWidget {
     //flutter nos provee una lista de iconos
     return FloatingActionButton(
       onPressed: () {
-          //Navigator.push(context, MaterialPageRoute(builder: (context) => PlayListPage()));
-          //Navigator.pop(context);
+        //Navigator.push(context, MaterialPageRoute(builder: (context) => PlayListPage()));
+        //Navigator.pop(context);
         //destruye la pagina anterior
         //Navigator.popAndPushNamed(context, ROUTE_PLAY_LIST);
         Navigator.pushNamedAndRemoveUntil(context, ROUTE_PLAY_LIST, (Route<dynamic>route) => false);
-        },
+      },
       child: Icon(Icons.add),
       backgroundColor: Colors.orange,
     );
