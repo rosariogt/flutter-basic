@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projects/Common/Myrouters.dart';
 import 'package:projects/Pages/MyHomePage.dart';
 
 class LoginPage extends StatefulWidget {
@@ -15,12 +16,13 @@ class LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SafeArea(
         child: ElevatedButton(
-          child: Text("MyHomePage"),
+          child: Text("Login"),
           onPressed: () => {
             //material page
-            Navigator.push(
-                //context, MaterialPageRoute(builder: (context) => MyHomePage( title: 'title',)))
-                context, MaterialPageRoute(builder: (context) => MyHomePage( title: 'title',)))
+            // Navigator.push(
+            //     //context, MaterialPageRoute(builder: (context) => MyHomePage( title: 'title',)))
+            //     context, MaterialPageRoute(builder: (context) => MyHomePage( title: 'title',)))
+            Navigator.pushNamed(context, ROUTE_HOME)
           },
         ),
       ),
