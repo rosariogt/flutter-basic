@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:projects/Pages/MyHomePage.dart';
+import 'package:projects/Pages/PlayListPage.dart';
 
 class NowPlayingPage extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class NowPlayingPageState extends State<NowPlayingPage> {
         child: ElevatedButton(
           child: Text("NowPlayingPage"),
           onPressed: () => {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage(title: "title")))
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>PlayListPage()))
           },
         ),
       ),

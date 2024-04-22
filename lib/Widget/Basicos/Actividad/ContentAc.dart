@@ -6,10 +6,8 @@ class ContentAc extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     //flutter nos provee una lista de iconos
-    return Center(
-        child: Image(
+    return  Image(
           image: AssetImage("assets/images/cody2.png"),
-        )
     );
   }
 

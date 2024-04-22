@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projects/Common/HomeArguments.dart';
 import 'package:projects/Widget/Basicos/Actividad/AppBarAc.dart';
 import 'package:projects/Widget/Basicos/Actividad/ContentAc.dart';
 import 'package:projects/Widget/Basicos/Actividad/FloatingButtonAc.dart';
@@ -41,14 +42,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    //HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
     return Scaffold(
       backgroundColor: Colors.white,
       //se debe agregar al boton flotante
       floatingActionButton: FloatingButtonAc(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      appBar: AppBarAc(),
+      appBar: AppBarAc("homeArguments.title"),
       body:  SafeArea(
-        child: ContentAc(),
+        child: Text("homeArguments.message"),
+        //child: ContentAc(),
         //child: MyButtons(),
         //child: MyImage(),
         //child: MyIcon(),

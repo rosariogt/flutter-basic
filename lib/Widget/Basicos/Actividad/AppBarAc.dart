@@ -2,12 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppBarAc extends StatelessWidget implements PreferredSizeWidget {
+
+  String title;
+
+  AppBarAc(this.title);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     //flutter nos provee una lista de iconos
     return AppBar(
-      title: Text("Inicio"),
+      title: Text(title),
       backgroundColor: Colors.teal,
       elevation: 30,
       shadowColor: Colors.white,
