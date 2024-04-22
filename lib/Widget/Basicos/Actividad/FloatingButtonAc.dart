@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projects/Common/Myrouters.dart';
 import 'package:projects/Pages/PlayListPage.dart';
 
 class FloatingButtonAc extends StatelessWidget {
@@ -10,7 +11,10 @@ class FloatingButtonAc extends StatelessWidget {
     return FloatingActionButton(
       onPressed: () {
           //Navigator.push(context, MaterialPageRoute(builder: (context) => PlayListPage()));
-          Navigator.pop(context);
+          //Navigator.pop(context);
+        //destruye la pagina anterior
+        //Navigator.popAndPushNamed(context, ROUTE_PLAY_LIST);
+        Navigator.pushNamedAndRemoveUntil(context, ROUTE_PLAY_LIST, (Route<dynamic>route) => false);
         },
       child: Icon(Icons.add),
       backgroundColor: Colors.orange,
