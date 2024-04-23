@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:projects/Pages/PlayListPage.dart';
 import 'package:projects/Widget/Multichild/MyColumn.dart';
 import 'package:projects/Widget/Multichild/MyRow.dart';
+import 'package:projects/Widget/Multichild/MyStack.dart';
 
 class NowPlayingPage extends StatefulWidget {
   @override
@@ -16,7 +17,8 @@ class NowPlayingPageState extends State<NowPlayingPage> {
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: MyRow(),
+        //child: MyRow(),
+        child: MyStack(),
       ),
     );
   }
