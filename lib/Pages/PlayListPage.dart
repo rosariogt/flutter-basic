@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projects/Pages/MyHomePage.dart';
+import 'package:projects/Widget/ListViewAndGridView/MyContainer.dart';
 
 import 'NowPlayingPage.dart';
 
@@ -16,12 +17,7 @@ class PlayListPageState extends State<PlayListPage> {
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: ElevatedButton(
-          child: Text("NowPlayingPage"),
-          onPressed: () => {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>NowPlayingPage()))
-          },
-        ),
+       child: MyContainer(),
       ),
     );
   }

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //ofrece material route
       onGenerateRoute: Myrouters.generateRoute,
-      initialRoute: ROUTE_LOGIN,
+      initialRoute: ROUTE_PLAY_LIST,
       theme: ThemeData(
         // This is the theme of your application.
         //
