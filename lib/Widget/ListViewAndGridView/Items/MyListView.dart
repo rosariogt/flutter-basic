@@ -42,7 +42,7 @@ class MyListViewState extends State<MyListView> {
             return Dismissible(
                 direction: DismissDirection.endToStart,
                 key: ObjectKey(sound),
-                child: MyListTile(sound, remove),
+                child: MyListTile(sound, index, remove),
                 onDismissed: (direction) {
                   remove(sound);
                 });
@@ -53,6 +53,18 @@ class MyListViewState extends State<MyListView> {
   remove(Sound sound){
     setState(() {
       mySounds.remove(sound);
+    });
+  }
+
+  add(Sound sound) {
+    setState(() {
+      mySounds.add(sound);
+    });
+  }
+
+  update(Sound sound, int index) {
+    setState(() {
+      mySounds[index];
     });
   }
 }
