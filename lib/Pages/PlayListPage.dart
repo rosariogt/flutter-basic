@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projects/Pages/MyHomePage.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyCard.dart';
+import 'package:projects/Widget/ListViewAndGridView/Items/MyGridView.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyListTile.dart';
 import 'package:projects/Widget/ListViewAndGridView/MyContainer.dart';
 
@@ -19,7 +20,7 @@ class PlayListPageState extends State<PlayListPage> {
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-       child: MyCard(),
+       child: MyGridView(),
        // child: MyListTile(),
       ),
     );
