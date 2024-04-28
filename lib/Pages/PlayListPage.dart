@@ -4,6 +4,7 @@ import 'package:projects/Pages/MyHomePage.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyCard.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyGridView.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyListTile.dart';
+import 'package:projects/Widget/ListViewAndGridView/Items/MyListView.dart';
 import 'package:projects/Widget/ListViewAndGridView/MyContainer.dart';
 
 import 'NowPlayingPage.dart';
@@ -20,7 +21,7 @@ class PlayListPageState extends State<PlayListPage> {
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-       child: MyGridView(),
+       child: MyListView(),
        // child: MyListTile(),
       ),
     );
