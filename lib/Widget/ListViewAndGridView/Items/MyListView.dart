@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projects/Common/MyKeys.dart';
 import 'package:projects/Model/Sound.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyCard.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyListTile.dart';
 
 class MyListView extends StatefulWidget {
+
+  MyListView():super(key: myListViewState);
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -38,13 +42,17 @@ class MyListViewState extends State<MyListView> {
             return Dismissible(
                 direction: DismissDirection.endToStart,
                 key: ObjectKey(sound),
-                child: MyListTile(sound),
+                child: MyListTile(sound, remove),
                 onDismissed: (direction) {
-                  setState(() {
-                    mySounds.remove(sound);
-                  });
+                  remove(sound);
                 });
           }),
     );
+  }
+
+  remove(Sound sound){
+    setState(() {
+      mySounds.remove(sound);
+    });
   }
 }
