@@ -4,7 +4,22 @@ import 'package:projects/Model/Sound.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyCard.dart';
 import 'package:projects/Widget/ListViewAndGridView/Items/MyListTile.dart';
 
-class MyListView extends StatelessWidget {
+class MyListView extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return MyListViewState();
+  }
+}
+
+class MyListViewState extends State<MyListView> {
+  List<Sound> mySounds = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    this.mySounds = sounds;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +27,24 @@ class MyListView extends StatelessWidget {
     return Container(
       color: Colors.red,
       child: ListView.builder(
-        shrinkWrap: true,//acomoda al contenido
-        //scrollDirection: Axis.horizontal,
-        reverse: true,
-        physics: NeverScrollableScrollPhysics(),
-        itemCount: sounds.length,
-        itemBuilder: (context, index)=>MyListTile(sounds[index]),
-      ),
+          shrinkWrap: true,
+          //acomoda al contenido
+          //scrollDirection: Axis.horizontal,
+          reverse: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemCount: sounds.length,
+          itemBuilder: (context, index) {
+            Sound sound = this.mySounds[index];
+            return Dismissible(
+                direction: DismissDirection.endToStart,
+                key: ObjectKey(sound),
+                child: MyListTile(sound),
+                onDismissed: (direction) {
+                  setState(() {
+                    mySounds.remove(sound);
+                  });
+                });
+          }),
     );
   }
 }
